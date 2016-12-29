@@ -1,0 +1,25 @@
+-- Finding Prime Numbers
+
+def mod(Int a, Int n) return a - n*(a/n) end
+
+def gcd(Int a, Int b)
+    rdef gcd1(Int a, Int b) return
+        if b <= 0: a
+        else:      gcd1(b, mod(a, b))
+        end
+    end
+    return if a > b: gcd1(a, b)
+               else: gcd1(b, a)
+           end
+end
+
+def is_prime?(n)
+    rdef check1(n, m) return
+        if m > n/2:                true
+        elif arith.mod(n, m) <= 0: false
+        else:                      check1(n, m + 1)
+        end
+    end
+    return check1(n, 2)
+end
+

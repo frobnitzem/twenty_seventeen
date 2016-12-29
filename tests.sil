@@ -1,0 +1,10 @@
+-- Finding Prime Numbers
+
+test1 = arith.is_prime?(3) == true
+
+test2 = arith.is_prime?(5) == true
+
+test3 = arith.is_prime?(9) == false
+
+test4 = arith.gcd(12, 8) == 4
+
