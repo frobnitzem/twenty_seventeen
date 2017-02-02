@@ -1,25 +1,19 @@
 -- Finding Prime Numbers
 
-def mod(Int a, Int n) return a - n*(a/n) end
+mod = fun Int a, Int n ->
+    a - n*(a/n)
 
-def gcd(Int a, Int b)
-    rdef gcd1(Int a, Int b) return
+gcd = fun Int a, Int b ->
+    gcd1 = rec fun Int a, Int b ->
         if b <= 0: a
         else:      gcd1(b, mod(a, b))
-        end
-    end
-    return if a > b: gcd1(a, b)
-               else: gcd1(b, a)
-           end
-end
+    if a > b: gcd1(a, b)
+    else: gcd1(b, a)
 
-def is_prime?(n)
-    rdef check1(n, m) return
+is_prime? = fun n ->
+    check1 = rec fun n, m ->
         if m > n/2:                true
         elif arith.mod(n, m) <= 0: false
         else:                      check1(n, m + 1)
-        end
-    end
-    return check1(n, 2)
-end
+    check1(n, 2)
 
