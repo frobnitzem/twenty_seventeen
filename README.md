@@ -3,19 +3,15 @@ Sil example repo
 
 This is a repository of live sil code.
 
-The contents can be referenced from any
-other sil module using the url `//frobnitzem.twenty_seventeen/<commit hash>`,
-where `<commit hash>` is the git hash-code for this commit.
+The contents can be referenced from any other sil module
+using the url `sil://test.twenty_seventeen/2017-02-24T00:00:00MST`
+to specify the project path and date.
 
 The results from running the code can be downloaded
 from the main sil server,
-`http://sque.predictivestatmech.org/api/v1/completed/<ast hash>`
-where `<ast hash>` is the contents of this repo's `sil.sha1` file.
+`https://sque.predictivestatmech.org/projects/test.twenty_seventeen`
 
-Sil has a simple commit hook that does a compile pass and then
-ships the new source code to the main server for evaluation.
-
-Sil is pure functional code, so all builds are parallel.
+Sil is pure functional code, which allows all builds to be parallel.
 
 
 Get Involved
@@ -33,10 +29,10 @@ using open data sets and algorithms.
 
 You can contribute in many ways:
 
-* Run a sil build-bot (shipping soon as a native client app in Chrome).
 * Develop and publish your own sil code.
+* Run a sil build-bot (shipping soon as a native client app in Chrome).
 * Improve the sil compiler experience by developing on sil's own source.
 * Send a feature request or suggestion for improvement!
 
-To get involved, contact David M. Rogers <predictivestatmech@gmail.com>.
+To get involved, head over to https://sque.predictivestatmech.org
 
